@@ -1,12 +1,21 @@
 # mesquitadev/homebrew-tap
 
-Homebrew tap for [Reclaim](https://github.com/mesquitadev/reclaim) — a native
-macOS app that finds and removes build artifacts, dependency folders and tool
-caches across a dozen languages.
+Homebrew tap for native macOS tools.
+
+**[Reclaim](https://github.com/mesquitadev/reclaim)** — finds and removes build
+artifacts, dependency folders and tool caches across a dozen languages.
 
 ```sh
 brew install --cask mesquitadev/tap/reclaim
 xattr -dr com.apple.quarantine /Applications/Reclaim.app
+```
+
+**[Bootsmith](https://github.com/mesquitadev/bootsmith)** — writes bootable Linux
+images to USB drives, for both legacy BIOS and UEFI machines.
+
+```sh
+brew install --cask mesquitadev/tap/bootsmith
+xattr -dr com.apple.quarantine /Applications/Bootsmith.app
 ```
 
 The second line is needed because the app is signed ad-hoc rather than notarized
