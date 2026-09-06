@@ -1,6 +1,6 @@
 cask "bootsmith" do
-  version "1.0.1"
-  sha256 "851e8e42c76facd91c5183380ddc2073233cf27d3f018c5e13dc479eb85114bf"
+  version "1.1.0"
+  sha256 "ca3e40d691b52b3d708e308c8d4f4f77d1013ef6aaf67a1903242a98c3fb8e51"
 
   url "https://github.com/mesquitadev/bootsmith/releases/download/v#{version}/Bootsmith.zip"
   name "Bootsmith"
