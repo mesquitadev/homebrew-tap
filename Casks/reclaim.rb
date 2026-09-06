@@ -16,17 +16,18 @@ cask "reclaim" do
 
   app "Reclaim.app"
 
-  # O app é assinado ad-hoc, não notarizado pela Apple. Sem --no-quarantine o
-  # Gatekeeper recusa a primeira abertura; a alternativa é o usuário fazer
-  # clique-direito → Abrir uma vez.
+  # O app é assinado ad-hoc, não notarizado pela Apple, então o Gatekeeper
+  # recusa a primeira abertura. O Homebrew 6 removeu a opção --no-quarantine,
+  # de modo que só restam limpar o atributo à mão ou abrir uma vez pelo menu
+  # de contexto.
   caveats do
     <<~EOS
-      Reclaim is signed ad-hoc rather than notarized by Apple.
+      Reclaim is signed ad-hoc rather than notarized by Apple, so macOS will
+      refuse the first launch. Clear the quarantine flag once:
 
-      If macOS refuses to open it, either reinstall with
-        brew install --cask --no-quarantine mesquitadev/tap/reclaim
-      or clear the flag once:
         xattr -dr com.apple.quarantine "#{appdir}/Reclaim.app"
+
+      Or right-click Reclaim.app in Finder, choose Open, then Open again.
 
       To scan ~/Documents, ~/Desktop or ~/Library/Developer, grant Full Disk
       Access in System Settings > Privacy & Security.
