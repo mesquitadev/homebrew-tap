@@ -2,8 +2,7 @@ cask "reclaim" do
   version "1.0.0"
   sha256 "ec56b0fc16165832cc925963eeeb636629f7ab8cb579350a9e1e76d70e807a3f"
 
-  url "https://github.com/mesquitadev/reclaim/releases/download/v#{version}/Reclaim.zip",
-      verified: "github.com/mesquitadev/reclaim/"
+  url "https://github.com/mesquitadev/reclaim/releases/download/v#{version}/Reclaim.zip"
   name "Reclaim"
   desc "Finds and removes build artifacts, dependency folders and tool caches"
   homepage "https://github.com/mesquitadev/reclaim"
