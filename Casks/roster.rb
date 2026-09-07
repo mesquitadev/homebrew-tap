@@ -1,6 +1,6 @@
 cask "roster" do
-  version "1.0.0"
-  sha256 "f552352bb6c8d4021bf8adff8c691cb790c605044e41f1d275fbdfa544f7d611"
+  version "1.1.0"
+  sha256 "1afd7ee1c59da42fd197bfba12fa834017eb6398f121fd5d02508cc6f4ab78e5"
 
   url "https://github.com/mesquitadev/roster/releases/download/v#{version}/Roster.zip"
   name "Roster"
